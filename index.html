@@ -3,15 +3,22 @@
     <title>Color Me</title>
 </head>
 <body>
-    Awesome webapp goes here!
-
     <canvas id="circles" width="920" height="720" style="border:1px solid #d3d3d3;">
         Your browser does not support the HTML5 canvas tag.
     </canvas>
 
-</body>
 
 <script src="lib/jquery-2.0.3.js"></script>
-<script type="text/javascript" src="colorpicker.js"></script>
+<script src="lib/colorpicker.js"></script>
+<script src="js/secondary.js"></script>
 
+<script type="text/javascript">
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.beginPath();
+ctx.arc(100,75,50,0,2*Math.PI);
+ctx.stroke();
+</script>
+
+</body>
 </html>
