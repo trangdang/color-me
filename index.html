@@ -30,12 +30,26 @@
 
 <!-- ajax request code -->
 <script type="text/javascript">
+    // function displayData(x) {
+    //     x.success(function(data) {
+    //         $.each(data, function(i, item){
+    //             $('body').append(item);
+    //         });            
+    //     });        
+    // }
+
     $(document).ready(function(){
-        var colors = getPalettesFromFirstInput("CCCCCC").success(function() {
-            $.each(colors, function(i, item){
-                $('body').append(item);
-            });            
-        });
+        
+        getPalettesFromFirstInput("CCCCCC");
+   
+
+
+
+
+        // $.each(secondaryColors, function(i, item){
+        //     $('body').append(item);
+        // });    
+
     });
 </script>
 </body>
