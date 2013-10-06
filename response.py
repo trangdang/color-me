@@ -1,31 +1,17 @@
 import cluster
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, url_for, redirect
 app = Flask(__name__)
-
-
-# @app.route('/')
-# def hello_world():
-#     return 'Hello World!'
 
 @app.route('/')
 def main():
-    return 
+    return redirect(url_for('static', filename='index.html'))
 
-@app.route('/get-colors', methods=['OPTIONS'])
+@app.route('/get-colors', methods=['POST'])
 def return_colors():
-    print request
-    print request.args
-    print "----------------"
-
     json_content = request.json['content']
-    print "------------json content"
-    print json_content
-
-    color_output = cluster.process(json_content)
-    print "-------------color output"
-    print color_output
-
-    return jsonify(colorlist=color_output)
+    return jsonify(colorlist=['000000'])
+#    color_output = cluster.process(json_content)
+#    return jsonify(colorlist=color_output)
         
 if __name__ == '__main__':
     app.debug = True

@@ -57,8 +57,8 @@ function algorithmitizeData(array) {
     console.log(array);
     $.ajax({
         type: "POST",
-        url: "http://127.0.0.1:5000/get-colors",
-        data: JSON.stringify({content: array}),
+        url: "/get-colors",
+        data: JSON.stringify({'content': array}),
         dataType: "json",
         contentType:"application/json",
         success: function(data) {
