@@ -9,9 +9,8 @@ def main():
 @app.route('/get-colors', methods=['POST'])
 def return_colors():
     json_content = request.json['content']
-    return jsonify(colorlist=['000000'])
-#    color_output = cluster.process(json_content)
-#    return jsonify(colorlist=color_output)
+    color_output = cluster.process(json_content, 8)
+    return jsonify(colorlist=color_output)
         
 if __name__ == '__main__':
     app.debug = True
