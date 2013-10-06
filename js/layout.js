@@ -16,7 +16,7 @@
 				$('#colorSelector2 div').css('backgroundColor', '#' + hex);
 			}
 		});
-		$('#colorpickerHolder2>div').css('position', 'absolute');
+// 		$('#colorpickerHolder2>div').css('position', 'absolute');
 		var widt = false;
 		$('#colorSelector2').bind('click', function() {
 			$('#colorpickerHolder2').stop().animate({height: widt ? 0 : 173}, 500);
