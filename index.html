@@ -1,15 +1,20 @@
 <html>
 <head>
     <link rel="stylesheet" href="css/colorpicker.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
     <link rel="stylesheet" media="screen" type="text/css" href="css/layout.css" />
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Handlee">
     <title>Cl.rs</title>
 </head>
 <body>
-    	<h1><br>Click the circle to start!</h1>
+    	<div class="circle">&nbsp;</div>
+
+        <h1><br>Click the circle to start!</h1>
     	<div id="colorSelector" width="566">
     		<div style="background-color: #7373bf"></div>
 		</div>
+
+        
 <!-- 
 <script>
     var c = document.getElementById("mainCircle");
@@ -20,6 +25,8 @@
     ctx.stroke();
 </script>
  -->
+
+<!-- <button id="testAlg">Click me!</button> -->
 
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/colorpicker.js"></script>
@@ -44,7 +51,9 @@
         getPalettesFromFirstInput("CCCCCC");
    
 
-
+        // $('#testAlg').click(function() {
+        //     getPalettesFromFirstInputForRandomAlg("CCCCCC");
+        // });
 
 
         // $.each(secondaryColors, function(i, item){

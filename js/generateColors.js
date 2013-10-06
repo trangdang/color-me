@@ -31,7 +31,7 @@ function processData(data) {
 
 function getPalettesFromFirstInputForRandomAlg(hexColor) {
     var url = "http://www.colourlovers.com/api/palettes/top?jsonCallback=?&format=json&hex=";
-    return $.ajax({
+    $.ajax({
         // contentType: "application/json",
         dataType: 'jsonp',
         type: "GET",
@@ -54,21 +54,20 @@ function getPalettesFromFirstInputForRandomAlg(hexColor) {
 }
 
 function algorithmitizeData(array) {
-
-    return $.ajax({
+    console.log(array);
+    $.ajax({
         type: "POST",
-        url:,
-        data: array
-    })
-    .done(function(data) {
-// key: colorlist
-// value: list of 8 strings
-
-
+        url: "http://127.0.0.1:5000/get-colors",
+        data: JSON.stringify({content: array}),
+        dataType: "json",
+        contentType:"application/json",
+        success: function(data) {
+            // dispAlgData(data);
+            console.log(data);
+        }
     });
-
 }
 
-function dispCircles() {
-
+function dispAlgData(data) {
+    alert('sucess');
 }
