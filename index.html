@@ -1,23 +1,24 @@
 <html>
 <head>
-    <title>Color Me</title>
+    <title>Cl.rs</title>
 </head>
 <body>
-    <canvas id="circles" width="920" height="720" style="border:1px solid #d3d3d3;">
+    <p id="test"></p>
+    <canvas id="circlesCanvas" width="920" height="720" style="border:1px solid #d3d3d3;">
         Your browser does not support the HTML5 canvas tag.
     </canvas>
 
 
-<script src="lib/jquery-2.0.3.js"></script>
-<script src="lib/colorpicker.js"></script>
-<script src="js/secondary.js"></script>
+<script src="../static/lib/jquery-2.0.3.js"></script>
+<script src="../static/lib/colorpicker.js"></script>
+<script src="../static/js/secondary.js"></script>
+<script src="../static/js/generateColors.js"></script>
 
 <script type="text/javascript">
-var c=document.getElementById("myCanvas");
-var ctx=c.getContext("2d");
-ctx.beginPath();
-ctx.arc(100,75,50,0,2*Math.PI);
-ctx.stroke();
+    $(document).ready(function(){
+        var colors = getPalettesFromFirstInput("CCCCCC");
+        $('#test').append(colors[0]);
+    });
 </script>
 
 </body>
