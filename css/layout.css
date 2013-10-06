@@ -1,8 +1,6 @@
 body,html,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
 	margin:0;
 	padding:0;
-	height:100%;
-	width:100%;
 }
 table {
 	border-collapse:collapse;
@@ -24,6 +22,7 @@ caption,th {
 h1,h2,h3,h4,h5,h6 {
 	font-size:100%;
 	font-weight:normal;
+	color:7373bf;
 }
 q:before,q:after {
 	content:'';
@@ -36,6 +35,8 @@ html, body {
 	font-size: 12px;
 	line-height: 18px;
 	color: #52697E;
+	height:100%;
+	width:100%;
 }
 body {
 	text-align: center;
@@ -47,10 +48,11 @@ body {
 	text-align: left;
 }
 h1 {
-	font-size: 21px;
-	height: 47px;
+	font-size: 48px;
+	font-family: 'Handlee', serif;
+	height: 0px;
 	line-height: 47px;
-	text-transform: uppercase;
+	text-transform: lowercase;
 }
 .navigationTabs {
 	height: 23px;

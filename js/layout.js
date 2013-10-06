@@ -35,7 +35,7 @@
 			$(this).ColorPickerSetColor(this.value);
 		});
 		$('#colorSelector').ColorPicker({
-			color: '#0000ff',
+			color: '#7373fb',
 			onShow: function (colpkr) {
 				$(colpkr).fadeIn(500);
 				return false;
