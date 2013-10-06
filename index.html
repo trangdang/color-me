@@ -32,9 +32,10 @@
 <!-- ajax request code -->
 <script type="text/javascript">
     $(document).ready(function(){
-        var colors = getPalettesFromFirstInput("CCCCCC");
-        $.each(colors, function(i, item){
-            $('body').append(item);
+        var colors = getPalettesFromFirstInput("CCCCCC").success(function() {
+            $.each(colors, function(i, item){
+                $('body').append(item);
+            });            
         });
     });
 </script>

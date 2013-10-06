@@ -20,9 +20,6 @@ function getPalettesFromFirstInput(hexColor) {
             }
         }
     });
-    
-
-    return secondaryColors;
 }
 
 function getPalettesFromFirstInputForRandomAlg(hexColor) {
@@ -38,7 +35,9 @@ function getPalettesFromFirstInputForRandomAlg(hexColor) {
         success: function(data) {
             $.each(data, function(i, palette){
                 $.each(palette.colors, function(j, color){
-                    secondaryColors.push(color);
+                    if (color !== hexColor) {
+                        secondaryColors.push(color);
+                    };
                 });
             });
         }
