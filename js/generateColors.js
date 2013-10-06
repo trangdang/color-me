@@ -29,18 +29,17 @@ function processData(data) {
     });
 }
 
-
 function getPalettesFromFirstInputForRandomAlg(hexColor) {
-    
-    var secondaryColors = new Array();
-    var url = "http://www.colourlovers.com/api/palettes/top?jsonCallback=?&format=json&hex=" + hexColor;
-
-    $.ajax({
+    var url = "http://www.colourlovers.com/api/palettes/top?jsonCallback=?&format=json&hex=";
+    return $.ajax({
         // contentType: "application/json",
         dataType: 'jsonp',
         type: "GET",
-        url: url,
+        url: url + hexColor,
         success: function(data) {
+
+            var secondaryColors = new Array();
+            
             $.each(data, function(i, palette){
                 $.each(palette.colors, function(j, color){
                     if (color !== hexColor) {
@@ -48,8 +47,28 @@ function getPalettesFromFirstInputForRandomAlg(hexColor) {
                     };
                 });
             });
+
+            algorithmitizeData(secondaryColors);
         }
     });
+}
 
-    return secondaryColors;
+function algorithmitizeData(array) {
+
+    return $.ajax({
+        type: "POST",
+        url:,
+        data: array
+    })
+    .done(function(data) {
+// key: colorlist
+// value: list of 8 strings
+
+
+    });
+
+}
+
+function dispCircles() {
+
 }
