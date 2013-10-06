@@ -7,9 +7,9 @@
     <title>Cl.rs</title>
 </head>
 <body>
-    	<div class="circle">&nbsp;</div>
-
+    	
         <h1><br>Click the circle to start!</h1>
+        <!-- <div class="circle">&nbsp;</div> -->
     	<div id="colorSelector" width="566">
     		<div style="background-color: #7373bf"></div>
 		</div>
@@ -48,7 +48,13 @@
 
     $(document).ready(function(){
         
-        getPalettesFromFirstInput("CCCCCC");
+        $('#colorSelector').find('div').click(function(){
+            $('#colorSelector').find('div').focusout(function(){
+                var color = $('#colorSelector').find('div').css('background-color');
+                $('body').append(color);
+            });
+        });        
+        // getPalettesFromFirstInput("CCCCCC");
    
 
         // $('#testAlg').click(function() {
