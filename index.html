@@ -2,7 +2,7 @@
 <head>
     <link rel="stylesheet" href="css/colorpicker.css" type="text/css" />
     <link rel="stylesheet" media="screen" type="text/css" href="css/layout.css" />
-    <title>Color Me</title>
+    <title>Cl.rs</title>
 </head>
 <body>
     	<div id="colorSelector">
@@ -10,7 +10,6 @@
 <!--     		<canvas id="mainCircle"></canvas> -->
     		<div style="background-color: #0000ff"></div>
 		</div>
-
 <!-- 
 <script>
     var c = document.getElementById("mainCircle");
@@ -30,14 +29,17 @@
 <script type="text/javascript" src="js/utils.js"></script>
 <script type="text/javascript" src="js/layout.js?ver=1.0.2"></script>
 <script src="js/secondary.js"></script>
-<!-- 
+<script src="../static/lib/jquery-2.0.3.js"></script>
+<script src="../static/lib/colorpicker.js"></script>
+<script src="../static/js/secondary.js"></script>
+<script src="../static/js/generateColors.js"></script>
+
+<!-- ajax request code -->
 <script type="text/javascript">
-var c=document.getElementById("myCanvas");
-var ctx=c.getContext("2d");
-ctx.beginPath();
-ctx.arc(100,75,50,0,2*Math.PI);
-ctx.stroke();
+    $(document).ready(function(){
+        var colors = getPalettesFromFirstInput("CCCCCC");
+        $('#test').append(colors[0]);
+    });
 </script>
- -->
 </body>
 </html>
