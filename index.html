@@ -21,8 +21,6 @@
 </script>
  -->
 
-
-<script src="lib/jquery-2.0.3.js"></script>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/colorpicker.js"></script>
 <script type="text/javascript" src="js/eye.js"></script>
@@ -35,6 +33,9 @@
 <script type="text/javascript">
     $(document).ready(function(){
         var colors = getPalettesFromFirstInput("CCCCCC");
+        $.each(colors, function(i, item){
+            $('body').append(item);
+        });
     });
 </script>
 </body>
